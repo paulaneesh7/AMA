@@ -14,7 +14,7 @@ const Header = async () => {
       <div className="flex mt-5 justify-between mx-5 items-center">
         <div className="flex gap-3 items-center">
           {!user && <h1 className="font-bold">AMA</h1>}
-          <h1 className="font-bold">{user?.name}</h1>
+          <h1 className="font-bold">{user?.name?.split(" ")[0]}</h1>
         </div>
 
         <div className="flex gap-3 items-center">
