@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { auth } from "../auth";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default async function UserAvatar() {
   const session = await auth();
@@ -10,8 +11,8 @@ export default async function UserAvatar() {
   return (
     <div>
       <Image
-        src={user.image ?? ""}
-        alt={user.name ?? "User avatar"}
+        src={user?.image ?? ""}
+        alt={user?.name ?? "User Avatar"}
         width={40}
         height={40}
         className="rounded-full border-2 border-white"
