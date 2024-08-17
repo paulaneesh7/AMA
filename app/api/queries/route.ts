@@ -13,9 +13,6 @@ export async function GET(request: NextRequest) {
 
   try {
     const queries = await prisma.query.findMany({
-      where: {
-        userId: String(session.user.id),
-      },
       select: {
         id: true,
         query: true,
@@ -23,7 +20,7 @@ export async function GET(request: NextRequest) {
         user: {
           select: {
             name: true,
-            email: true
+            email: true,
           },
         },
       },
