@@ -4,6 +4,7 @@ import SignOut from "@/components/Signout";
 import UserAvatar from "@/components/UserAvatar";
 import Image from "next/image";
 import { ModeToggle } from "./mode-toggle";
+import Link from "next/link";
 
 const Header = async () => {
   const session = await auth();
@@ -14,11 +15,13 @@ const Header = async () => {
       <div className="flex mt-5 justify-between mx-5 items-center">
         <div className="flex gap-3 items-center">
           {!user && <h1 className="font-bold">AMA</h1>}
-          <h1 className="font-bold">{user?.name?.split(" ")[0]}</h1>
+          <Link href="/">
+            <h1 className="font-bold">{user?.name?.split(" ")[0]}</h1>
+          </Link>
         </div>
 
         <div className="flex gap-3 items-center">
-        <ModeToggle />
+          <ModeToggle />
           {user ? (
             <div>
               <SignOut />
