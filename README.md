@@ -2,7 +2,7 @@
 
 Simple AMA application for personal use.
 
-[![Deploy with Vercel](https://vercel.com/button)](anime-hub-rust.vercel.app)
+[![Deploy with Vercel](https://vercel.com/button)](ama.paulaneesh7.in)
 
 <h3>TechStack:</h3>
 
